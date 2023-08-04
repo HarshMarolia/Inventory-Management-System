@@ -2,7 +2,7 @@ import { MongoClient } from 'mongodb';
 import { NextResponse } from 'next/server';
 
 export async function GET(request) {
-    const uri = "mongodb+srv://harsh:TnDdCGqkzY2npLSD@cluster0.ad0s9wv.mongodb.net/";
+    const uri =  process.env.API_URL;
     const client = new MongoClient(uri);
 
     try {
